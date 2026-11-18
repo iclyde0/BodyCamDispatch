@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#10140F"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.12"
+        android:text="FIELD CAMERA"
+        android:textAllCaps="true"
+        android:textColor="#E2A53A"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/app_name"
+        android:textColor="#E7EFE2"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="#1A2118"
+        android:gravity="center"
+        android:letterSpacing="0.08"
+        android:padding="16dp"
+        android:text="@string/banner_standby"
+        android:textColor="#E2A53A"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ready"
+        android:textColor="#9AAB96"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="PC address"
+        android:textColor="#9AAB96" />
+
+    <EditText
+        android:id="@+id/hostInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="username"
+        android:hint="192.168.1.20"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:textColor="#E7EFE2"
+        android:textColorHint="#667566" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Stream path"
+        android:textColor="#9AAB96" />
+
+    <EditText
+        android:id="@+id/pathInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="cam-alpha-09"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:text="cam-alpha-09"
+        android:textColor="#E7EFE2"
+        android:textColorHint="#667566" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MQTT broker (optional)"
+        android:textColor="#9AAB96" />
+
+    <EditText
+        android:id="@+id/mqttInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="192.168.1.20:1883"
+        android:importantForAutofill="no"
+        android:inputType="textNoSuggestions"
+        android:textColor="#E7EFE2"
+        android:textColorHint="#667566" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Start stream" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Volume Down is the wearer push-to-talk key. Dispatcher audio from the PC cuts in on the speaker and mutes this microphone."
+        android:textColor="#9AAB96"
+        android:textSize="13sp" />
+</LinearLayout>

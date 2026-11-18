@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bodycam Agent</string>
+    <string name="banner_standby">STANDBY</string>
+    <string name="banner_ptt">PTT TRANSMITTING...</string>
+    <string name="banner_dispatch">DISPATCH IN</string>
+</resources>

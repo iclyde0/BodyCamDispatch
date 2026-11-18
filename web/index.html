@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bodycam Dispatch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="live-dot" aria-hidden="true"></span>
+      <div>
+        <p class="eyebrow">PC web command center</p>
+        <h1>Bodycam Dispatch</h1>
+      </div>
+    </div>
+    <div class="targets" id="targets"></div>
+    <div class="header-actions">
+      <button id="micButton" type="button">Enable Mic</button>
+      <button id="addButton" type="button" class="primary">Add Camera</button>
+    </div>
+  </header>
+
+  <main id="grid" class="grid" aria-live="polite"></main>
+
+  <footer class="dock">
+    <div class="vu-block">
+      <span>Desk mic</span>
+      <canvas id="deskVu" width="220" height="36" aria-label="Desk microphone level"></canvas>
+    </div>
+    <button id="ptt" type="button">Hold to transmit</button>
+    <p id="pttState">Standby</p>
+  </footer>
+
+  <dialog id="addDialog">
+    <form method="dialog" id="addForm">
+      <h2>Add camera</h2>
+      <label>
+        Name
+        <input id="camName" name="name" required value="cam-alpha-09" />
+      </label>
+      <label>
+        Stream path
+        <input id="camPath" name="path" required value="cam-alpha-09" />
+      </label>
+      <label>
+        Playback
+        <select id="camMode" name="mode">
+          <option value="webrtc" selected>WebRTC (low latency)</option>
+          <option value="hls">Internet HLS Stream (.m3u8)</option>
+        </select>
+      </label>
+      <div class="dialog-actions">
+        <button value="cancel" type="submit" class="ghost">Cancel</button>
+        <button value="add" type="submit" class="primary">Add Camera to Grid</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.20/dist/hls.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
